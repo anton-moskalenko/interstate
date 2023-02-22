@@ -12,14 +12,22 @@ class Tree
 {
     static ?Manager $manager = null;
 
-    static public function collect(): void
+    public static function collect(?Manager $manager = null): Manager
     {
-        $manager = new Manager();
+        if(is_null($manager))
+        {
+            $manager = new Manager();
+        }
 
         // @todo: add automatic API method collect.
-//        $manager->add(new Method('Interstate.Ticket.Collection', '\Liloi\Interstate\API\Ticket\Collection\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Collection', '\Liloi\Interstate\API\Points\Collection\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Create', '\Liloi\Interstate\API\Points\Create\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Remove', '\Liloi\Interstate\API\Points\Remove\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Edit', '\Liloi\Interstate\API\Points\Edit\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Save', '\Liloi\Interstate\API\Points\Save\Method::execute'));
 
         self::$manager = $manager;
+        return $manager;
     }
 
     public static function execute(): string
