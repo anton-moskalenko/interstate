@@ -13,6 +13,7 @@ class Method extends SuperMethod
         $entity = Manager::load(self::getParameter('key'));
 
         $entity->setTitle(self::getParameter('title'));
+        $entity->setTags(self::getParameter('tags'));
         $entity->setData(self::getParameter('data'));
         $entity->setProgram(self::getParameter('program'));
 

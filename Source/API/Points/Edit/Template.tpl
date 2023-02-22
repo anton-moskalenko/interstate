@@ -7,6 +7,7 @@
             <th>Value</th>
         </tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
+        <tr><td>Tags</td><td><input type="text" name="tags" value="<?php echo $entity->getTags(); ?>"/></td></tr>
         <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
         <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>
     </table>
