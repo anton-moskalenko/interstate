@@ -54,6 +54,17 @@ Interstate.Points.edit = function (key)
     });
 };
 
+Interstate.Points.show = function (key)
+{
+    API.request('Interstate.Points.Show', {
+        'key': key
+    }, function (data) {
+        $('#map').html(data.render);
+    }, function () {
+
+    });
+};
+
 Interstate.Points.save = function (key)
 {
     if(!confirm('Are you sure?'))
@@ -65,6 +76,8 @@ Interstate.Points.save = function (key)
     API.request('Interstate.Points.Save', {
         'key': key,
         'title': jq_block.find('[name="title"]').val(),
+        'tags': jq_block.find('[name="tags"]').val(),
+        'program': jq_block.find('[name="program"]').val(),
         'data': jq_block.find('[name="data"]').val()
     }, function (data) {
         Interstate.Points.Collection($('#current-date').val());

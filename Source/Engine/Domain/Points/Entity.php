@@ -2,6 +2,7 @@
 
 namespace Liloi\Interstate\Engine\Domain\Points;
 
+use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
 
 /**
@@ -28,6 +29,12 @@ class Entity extends AbstractEntity
     public function getProgram(): string
     {
         return $this->getField('program');
+    }
+
+
+    public function getProgramParse(): string
+    {
+        return Parser::parseString($this->getField('program'));
     }
 
     public function setProgram(string $value): void
