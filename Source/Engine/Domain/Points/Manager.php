@@ -77,4 +77,14 @@ class Manager extends DomainManager
         $name = self::getTableName();
         self::getAdapter()->insert($name, $row);
     }
+
+    public static function remove(Entity $entity): void
+    {
+        $name = self::getTableName();
+
+        self::getAdapter()->delete(
+            $name,
+            sprintf('key_point = "%s"', $entity->getKey())
+        );
+    }
 }

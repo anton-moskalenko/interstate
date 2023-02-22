@@ -62,4 +62,9 @@ class Entity extends AbstractEntity
     {
         Manager::save($this);
     }
+
+    public function remove(): void
+    {
+        Manager::remove($this);
+    }
 }

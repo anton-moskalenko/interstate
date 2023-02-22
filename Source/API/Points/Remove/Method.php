@@ -10,9 +10,8 @@ class Method extends SuperMethod
 {
     public static function execute(): Response
     {
-        $entity = Manager::load(self::getParameter('key'));
-//        $entity->setStatus(Statuses::REMOVED);
-        $entity->save();
+        $entity = Manager::load(self::getParameter('key'));;
+        $entity->remove();
 
         return new Response();
     }
