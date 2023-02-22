@@ -65,6 +65,7 @@ Interstate.Points.save = function (key)
     API.request('Interstate.Points.Save', {
         'key': key,
         'title': jq_block.find('[name="title"]').val(),
+        'program': jq_block.find('[name="program"]').val(),
         'data': jq_block.find('[name="data"]').val()
     }, function (data) {
         Interstate.Points.Collection($('#current-date').val());
