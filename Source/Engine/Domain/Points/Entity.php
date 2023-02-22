@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Interstate\Engine\Domain\Points;
 
 use Liloi\Tools\Entity as AbstractEntity;
 
@@ -61,5 +61,10 @@ class Entity extends AbstractEntity
     public function save(): void
     {
         Manager::save($this);
+    }
+
+    public function remove(): void
+    {
+        Manager::remove($this);
     }
 }

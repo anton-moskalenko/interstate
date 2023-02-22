@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Interstate\Engine\Domain\Points;
 
 use Liloi\Rune\Engine\Domain\Manager as DomainManager;
 
@@ -69,14 +69,22 @@ class Manager extends DomainManager
     public static function create(): void
     {
         $row = [
-            'keys' => gmdate('Y-m-d H:i:s'),
+            'key_point' => gmdate('Y-m-d H:i:s'),
             'title' => 'Enter the title',
-            'program' => '// Invisible line',
-            'tags' => 'enter the tags',
             'data' => '{}',
         ];
 
         $name = self::getTableName();
         self::getAdapter()->insert($name, $row);
+    }
+
+    public static function remove(Entity $entity): void
+    {
+        $name = self::getTableName();
+
+        self::getAdapter()->delete(
+            $name,
+            sprintf('key_point = "%s"', $entity->getKey())
+        );
     }
 }
