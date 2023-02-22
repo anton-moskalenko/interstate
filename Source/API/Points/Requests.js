@@ -61,15 +61,11 @@ Interstate.Points.save = function (key)
         return;
     }
     
-    const jq_block = $('#Points-edit');
+    const jq_block = $('#point-edit');
     API.request('Interstate.Points.Save', {
         'key': key,
         'title': jq_block.find('[name="title"]').val(),
-        'start': jq_block.find('[name="start"]').val(),
-        'finish': jq_block.find('[name="finish"]').val(),
-        'status': jq_block.find('[name="status"]').val(),
-        'type': jq_block.find('[name="type"]').val(),
-        'data': '{}'
+        'data': jq_block.find('[name="data"]').val()
     }, function (data) {
         Interstate.Points.Collection($('#current-date').val());
     }, function () {
