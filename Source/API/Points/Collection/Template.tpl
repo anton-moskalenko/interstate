@@ -18,7 +18,8 @@
         <td><?php echo $entity->getTags(); ?></td>
         <td style="text-align: right;">
             <a href="javascript:void(0)" onclick="Interstate.Points.edit('<?php echo $entity->getKey(); ?>');">Edit</a> &diams;
-            <a href="javascript:void(0)" onclick="Interstate.Points.remove('<?php echo $entity->getKey(); ?>');">Remove</a>
+            <a href="javascript:void(0)" onclick="Interstate.Points.remove('<?php echo $entity->getKey(); ?>');">Remove</a> &diams;
+            <a href="javascript:void(0)" onclick="Interstate.Points.show('<?php echo $entity->getKey(); ?>');">Show</a>
         </td>
     </tr>
     <?php endforeach; ?>

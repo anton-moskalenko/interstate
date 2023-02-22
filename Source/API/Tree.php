@@ -24,6 +24,7 @@ class Tree
         $manager->add(new Method('Interstate.Points.Create', '\Liloi\Interstate\API\Points\Create\Method::execute'));
         $manager->add(new Method('Interstate.Points.Remove', '\Liloi\Interstate\API\Points\Remove\Method::execute'));
         $manager->add(new Method('Interstate.Points.Edit', '\Liloi\Interstate\API\Points\Edit\Method::execute'));
+        $manager->add(new Method('Interstate.Points.Show', '\Liloi\Interstate\API\Points\Show\Method::execute'));
         $manager->add(new Method('Interstate.Points.Save', '\Liloi\Interstate\API\Points\Save\Method::execute'));
 
         self::$manager = $manager;

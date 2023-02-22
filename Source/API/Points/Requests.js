@@ -54,6 +54,17 @@ Interstate.Points.edit = function (key)
     });
 };
 
+Interstate.Points.show = function (key)
+{
+    API.request('Interstate.Points.Show', {
+        'key': key
+    }, function (data) {
+        $('#map').html(data.render);
+    }, function () {
+
+    });
+};
+
 Interstate.Points.save = function (key)
 {
     if(!confirm('Are you sure?'))
