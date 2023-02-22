@@ -1,9 +1,9 @@
 Interstate.Points = {};
 
-Interstate.Points.Collection = function (dt)
+Interstate.Points.Collection = function ()
 {
     API.request('Interstate.Points.Collection', {
-        'dt': dt
+        'dt': $('#current-date').val()
     }, function (data) {
         $('#page').html(data.render);
     }, function () {
