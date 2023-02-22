@@ -21,7 +21,7 @@ Interstate.Points.create = function ()
     API.request('Interstate.Points.Create', {
         'debug': true
     }, function (data) {
-        Interstate.Points.Collection($('#current-date').val());
+        Interstate.Points.Collection();
     }, function () {
 
     });

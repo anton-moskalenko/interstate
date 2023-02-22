@@ -69,10 +69,8 @@ class Manager extends DomainManager
     public static function create(): void
     {
         $row = [
-            'keys' => gmdate('Y-m-d H:i:s'),
+            'key_point' => gmdate('Y-m-d H:i:s'),
             'title' => 'Enter the title',
-            'program' => '// Invisible line',
-            'tags' => 'enter the tags',
             'data' => '{}',
         ];
 
