@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Interstate\Engine\Domain\Points;
 
 use Liloi\Rune\Engine\Domain\Manager as DomainManager;
 

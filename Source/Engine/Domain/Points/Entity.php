@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Ticket;
+namespace Liloi\Interstate\Engine\Domain\Points;
 
 use Liloi\Tools\Entity as AbstractEntity;
 
