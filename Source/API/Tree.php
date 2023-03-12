@@ -17,6 +17,7 @@ class Tree
         $manager = new Manager();
 
         // @todo: add automatic API method collect.
+        $manager->add(new Method('Interstate.Topics.Collection', '\Liloi\Interstate\API\Topics\Collection\Method::execute'));
         $manager->add(new Method('Interstate.Topics.Show', '\Liloi\Interstate\API\Topics\Show\Method::execute'));
         $manager->add(new Method('Interstate.Topics.Create', '\Liloi\Interstate\API\Topics\Create\Method::execute'));
         $manager->add(new Method('Interstate.Topics.Remove', '\Liloi\Interstate\API\Topics\Remove\Method::execute'));

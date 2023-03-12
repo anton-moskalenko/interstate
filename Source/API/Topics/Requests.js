@@ -1,4 +1,15 @@
 API.Topics = {
+    collection: function ()
+    {
+        API.request('Interstate.Topics.Collection', {
+
+        }, function (data) {
+            $('#map').html(data.render);
+        }, function () {
+
+        });
+    },
+
     show: function ()
     {
         API.request('Interstate.Topics.Show', {
