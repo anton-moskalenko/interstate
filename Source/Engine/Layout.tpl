@@ -25,7 +25,7 @@
             </tr>
         </table>
         <script>
-
+            API.Topics.show();
         </script>
     </body>
 </html>

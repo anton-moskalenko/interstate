@@ -1,19 +1,20 @@
 <style>
-    #table-road
+    .topic-block
     {
-        width: 100%;
-        border-collapse: collapse;
+        border: gray 1px solid;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
     }
 </style>
 
-<table id="table-road">
-    <?php foreach($collection as $entity): ?>
-        <tr>
-            <td><?php echo $entity->getTitle(); ?></td>
-            <td style="text-align: right;">
-                <a href="javascript:void(0)" onclick="API.Topics.edit('<?php echo $entity->getKey(); ?>');">Edit</a> &diams;
-                <a href="javascript:void(0)" onclick="API.Topics.remove('<?php echo $entity->getKey(); ?>');">Remove</a>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</table>
+<?php foreach($collection as $entity): ?>
+    <div class="topic-block">
+        <h3><?php echo $entity->getTitle(); ?></h3>
+        <hr/>
+        <?php echo $entity->getUid(); ?> / <?php echo $entity->getTags(); ?>
+        <hr/>
+        <?php echo $entity->getProgram(); ?>
+    </div>
+<?php endforeach; ?>
+
