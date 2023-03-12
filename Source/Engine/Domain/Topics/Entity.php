@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Interstate\Engine\Domain\Quests;
+namespace Liloi\Interstate\Engine\Domain\Topics;
 
 use Liloi\Tools\Entity as AbstractEntity;
 
