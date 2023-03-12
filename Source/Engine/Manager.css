@@ -12,7 +12,6 @@ body
 h1,h2,h3,h4,h5
 {
     margin: 0;
-    /*text-align: center;*/
 }
 
 table th,
@@ -29,30 +28,44 @@ a
 
 #menu
 {
-    height: 100px;
-    width: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%);
+    background-color: #ececec;
     text-align: center;
-    font-size: xx-large;
+    width: 100px;
 }
 
-#bar
+#header
 {
-    height: 20px;
-    width: 100%;
-    position:fixed;
-    bottom:0;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(255,255,255,1) 100%);
+    background-color: #ececec;
+    height: 30px;
+    padding-top: 5px;
     text-align: center;
+    width: 100%;
+}
+
+#footer
+{
+    background-color: #ececec;
+    bottom:0;
     font-size: large;
+    height: 20px;
+    position:fixed;
+    text-align: center;
+    width: 100%;
 }
 
 #page
 {
+    background-color: #ececec;
+    display: none;
     height: 80%;
     overflow-y: scroll;
+    width: 70%;
+}
+
+#map
+{
+    background-color: #eeffef;
+    height: 80%;
 }
 
 #minor
@@ -60,7 +73,7 @@ a
     font-size: large;
 }
 
-.in-hand {background-color: #ffffa9;}
-.success {background-color: #c2ffc3;}
-.failure {background-color: #fdd4d4;}
-.to-do {background-color: #cdcdcd;}
+.failure {color: #ff0000;}
+.in-hand {color: #ffff00;}
+.success {color: #00ff00;}
+.to-do {color: #a3a3a3;}

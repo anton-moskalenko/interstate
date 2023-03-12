@@ -2,9 +2,9 @@
 
 namespace Liloi\Interstate\Engine;
 
+use Liloi\Config\Pool;
 use Liloi\Interstate\API\Tree;
 use Liloi\Interstate\Engine\Domain\Manager;
-use Liloi\Config\Pool;
 use Rune\Application\Conceptual as ConceptualApplication;
 
 /**
