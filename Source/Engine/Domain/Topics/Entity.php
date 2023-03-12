@@ -39,6 +39,11 @@ class Entity extends AbstractEntity
         return str_replace(' ', '-', $status);
     }
 
+    public function getLink(): string
+    {
+        return date('/Y-m-d/H-i-s', strtotime($this->getUid()));
+    }
+
     public function save(): void
     {
         Manager::save($this);

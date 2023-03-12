@@ -10,7 +10,11 @@
 
 <?php foreach($collection as $entity): ?>
     <div class="topic-block">
-        <h3><?php echo $entity->getTitle(); ?></h3>
+        <h3>
+            <a href="<?php echo $entity->getLink(); ?>">
+                <?php echo $entity->getTitle(); ?>
+            </a>
+        </h3>
         <hr/>
         <?php echo $entity->getUid(); ?> / <?php echo $entity->getTags(); ?>
         <hr/>
