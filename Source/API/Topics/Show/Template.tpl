@@ -1,24 +1,10 @@
 <style>
-    .topic-block
+    .topic-show
     {
-        border: gray 1px solid;
-        margin-bottom: 5px;
-        padding: 5px;
-        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 </style>
 
-<?php foreach($collection as $entity): ?>
-    <div class="topic-block">
-        <h3>
-            <a href="<?php echo $entity->getLink(); ?>">
-                <?php echo $entity->getTitle(); ?>
-            </a>
-        </h3>
-        <hr/>
-        <?php echo $entity->getUid(); ?> / <?php echo $entity->getTags(); ?>
-        <hr/>
-        <?php echo $entity->getProgram(); ?>
-    </div>
-<?php endforeach; ?>
-
+<iframe class="topic-show" src="<?php echo $entity->getUrl(); ?>"></iframe>

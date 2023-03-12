@@ -25,7 +25,11 @@
             </tr>
         </table>
         <script>
+            <?php if($_SERVER['REQUEST_URI'] === '/'): ?>
             API.Topics.collection();
+            <?php else: ?>
+            API.Topics.show();
+            <?php endif; ?>
         </script>
     </body>
 </html>

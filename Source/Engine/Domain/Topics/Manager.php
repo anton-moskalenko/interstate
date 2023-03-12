@@ -48,6 +48,19 @@ class Manager extends DomainManager
         return Entity::create($row);
     }
 
+    public static function loadByUID(string $uid): Entity
+    {
+        $name = self::getTableName();
+
+        $row = self::getAdapter()->getRow(sprintf(
+            'select * from %s where uid="%s"',
+            $name,
+            $uid
+        ));
+
+        return Entity::create($row);
+    }
+
     public static function save(Entity $entity): void
     {
         $name = self::getTableName();

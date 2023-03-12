@@ -12,8 +12,15 @@ class Method extends SuperMethod
     {
         $response = new Response();
 
+        $url = trim($_SERVER['REQUEST_URI'], '/');
+        list($date, $time) = explode('/', $url);
+        $time = str_replace('-', ':', $time);
+        $uid = $date . ' ' . $time;
+
+        $entity = TopicsManager::loadByUID($uid);
+
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
-            'collection' => TopicsManager::loadCollection()
+            'entity' => $entity
         ]));
 
         return $response;
